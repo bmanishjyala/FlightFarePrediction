@@ -7,6 +7,7 @@ body{
     background:  #0D0C22;
     color: white;
     font-family: 'Poppins', sans-serif;
+
 }
 .alag{
     color: #9E9EA7;
@@ -18,4 +19,15 @@ body{
 }
 #layOver{
     color: white;
+}
+#time{
+    display: flex;
+    justify-content: center;
+    flex-shrink:1 ;
+}
+@media screen and (max-width:550px){
+    #time{
+        flex-direction: column;
+        align-items: center;
+    }
 }

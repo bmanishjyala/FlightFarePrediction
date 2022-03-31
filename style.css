@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background:  #0D0C22;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+.alag{
+    color: #9E9EA7;
+    margin-top: -10px;
+    margin-left: 6px;
+}
+#centerConsole{
+   color:  #0D0C22;    
+}
+#layOver{
+    color: white;
+}

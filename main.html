@@ -18,56 +18,151 @@
 </head>
 
 <body >
-   <div class="main">
+    <div class="background">
+        <div class="container">
+          <div class="screen">
+            <div class="screen-header">
+              <div class="screen-header-left">
+                <div class="screen-header-button close"></div>
+                <div class="screen-header-button maximize"></div>
+                <div class="screen-header-button minimize"></div>
+              </div>
+              <div class="screen-header-right">
+                <div class="screen-header-ellipsis"></div>
+                <div class="screen-header-ellipsis"></div>
+                <div class="screen-header-ellipsis"></div>
+              </div>
+            </div>
+            <div class="screen-body">
+              <div class="screen-body-item left">
+                <div class="app-title">
+                  <span>Calculate</span>
+                  <span>Fare</span>
+                </div>
+              </div>
+              <div class="screen-body-item">
+                <div class="app-form">
+                    <form  action="\predict" method="post">
+                        <div id="time" class=" mt-4 mb-3 d-flex box ">
+                           <div  class="mx-3 sbox" >
+                               <h6 >Departure</h6>
+                               <input  class="p-2   border" required="required" type="date" required="required">
+                           </div>
+                           <div  class="mx-3 sbox" >
+                               <h6 >Arrival</h6>
+                               <input class="p-2  border"  type="date" required="required" name="Dep_Time" id="Dep_Time"
+                                   required="required">
+               
+                           </div>
+                       </div>
+                       <div id="sd"  class=" box mb-3 ">
+                           <div class="input-group mx-3  box  sbox" >
+                            <h6 >Source</h6>
+                               <select class="form-select shadow-none border "  required="required" id="inputGroupSelect01">
+                                   <option class="text-center" selected>--</option>
+                               </select>
+                           </div>
+                           <div class="input-group mx-3 box sbox"  >
+                            <h6 >Destination</h6>
+                               <select class="form-select shadow-none border"  required="required" id="inputGroupSelect02">
+                                   <option selected class="text-center">--</option>
+               
+                               </select>
+                           </div>
+                       </div>
+                     <div class="box  mb-3">
+                         <div class=" mx-3 sbox">
+                           <h6 >Layover</h6>
+                           <select name="stops" class="px-4 form-select   py-2 shadow-none border "  required="required">
+                               <option value="0">Non-Stop</option>
+                               <option value="1">1</option>
+                               <option value="2">2</option>
+                               <option value="3">3</option>
+                               <option value="4">4</option>
+                           </select>
+                         </div>
+                      
+                       
+                           <div class="mx-3 sbox" >
+                               <h6> Airlines</h6>
+                               <select class="form-select shadow-none border "  required="required" id="inputGroupSelect03">
+                                   <option selected class="text-center w-50">Airlines </option>
+               
+                               </select>
+                           </div>
+                   
+                     </div> 
+                      
+                     
+           <div class="d-flex justify-content-end">
+               <input type="submit" value="Submit" class="btn btn-secondary">
+           
+           </div>
+                   </form>
+                </div>
+              </div>
+            </div>
+          </div>
+       
+        </div>
+      </div>
+      
+   <!-- <div class="main">
        <div class="leftSide">
-           <h1 class="text-center mb-5">Find Your Fare</h1>
+           <h1 class="text-center text-light mb-5">Find Your Fare</h1>
            <img class="px-5" src="./1.svg" alt="">
        </div>
        <div class="rightSide">
         <form class="px-3 py-4 shadow" action="\predict" method="post">
-            <div id="dest"  class="container d-flex justify-content-center">
-                <div class="input-group  m-3">
-                    <select class="form-select shadow-none " id="inputGroupSelect01">
-                        <option class="text-center" selected>From</option>
-                    </select>
-                </div>
-                <div class="input-group m-3">
-                    <select class="form-select shadow-none" id="inputGroupSelect02">
-                        <option selected class="text-center">To </option>
-    
-                    </select>
-                </div>
-            </div>
-            <div class="container w-50 mt-3">
-                <div class="input-group ">
-                    <select class="form-select shadow-none" id="inputGroupSelect03">
-                        <option selected class="text-center w-50">Airlines </option>
-    
-                    </select>
-                </div>
-            </div>
-            <div id="time" class=" mt-4 d-flex justify-content-center ">
-                <div class=" text-dark mx-2 ">
+             <div id="time" class=" mt-4 d-flex justify-content-evenly ">
+                <div  style="width: 250px;">
                     <h6 >Departure</h6>
-                    <input class="p-2 w-75  rounded" type="date" required="required">
+                    <input class="p-2 w-100 mx-3 border" type="date" required="required">
                 </div>
-                <div class="mx-2 text-dark ">
+                <div class="mx-2 text-dark " style="width: 250px;">
                     <h6 >Arrival</h6>
-                    <input class="p-2 w-75 rounded" type="date" name="Dep_Time" id="Dep_Time"
+                    <input class="p-2 w-100 border" type="date" name="Dep_Time" id="Dep_Time"
                         required="required">
     
                 </div>
             </div>
-            <div id="layOver" class="container text-dark mt-5 d-flex justify-content-center align-items-center">
-                <h5 class="mx-2 pt-2">Layover</h5>
-                <select name="stops" class="px-4 py-1" required="required">
+            <div id="dest"  class="container d-flex justify-content-evenly">
+                <div class="input-group m-3" style="width: 250px;">
+                    <select class="form-select shadow-none border " id="inputGroupSelect01">
+                        <option class="text-center" selected>Source</option>
+                    </select>
+                </div>
+                <div class="input-group m-3" style="width: 250px;">
+                    <select class="form-select shadow-none border" id="inputGroupSelect02">
+                        <option selected class="text-center">Destination </option>
+    
+                    </select>
+                </div>
+            </div>
+          <div class="d-flex align-items-center  mb-3">
+              <div class="d-flex flex-column ">
+                <h6 >Layover</h6>
+                <select name="stops" class="px-4  py-1 border" style="width: 250px;" required="required">
                     <option value="0">Non-Stop</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
                 </select>
-            </div>
+              </div>
+           
+            
+                <div class="input-group mx-3  d-flex flex-column" >
+                    <h6> Airlines</h6>
+                    <select class="form-select shadow-none border mx-3" style="width: 250px;" id="inputGroupSelect03">
+                        <option selected class="text-center w-50">Airlines </option>
+    
+                    </select>
+                </div>
+        
+          </div> 
+           
+          
 <div class="d-flex justify-content-end">
     <input type="submit" value="Submit" class="btn btn-secondary">
 
@@ -75,9 +170,9 @@
         </form>
          
    </div>
- 
+ -->
       
-    <script src="./index.js"></script>
+    <script src="./index.js"></script> 
 </body>
 
 </html>

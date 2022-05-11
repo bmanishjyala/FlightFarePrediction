@@ -30,9 +30,68 @@
                     class="button ">
                     About Us
                 </a>
-                <a href="main.html" class="button">
+                <a href="./main.html"  class="button">
                     Get Started
                 </a>
+                <div class="modal fade text-dark" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Find My Fare</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="\predict" method="post">
+                                <div id="dest" class="container d-flex justify-content-center">
+                                    <div class="input-group  m-3">
+                                        <select class="form-select shadow-none " id="inputGroupSelect01">
+                                            <option class="text-center" selected>From</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-group m-3">
+                                        <select class="form-select shadow-none" id="inputGroupSelect02">
+                                            <option selected class="text-center">To </option>
+                        
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="container w-50 mt-3">
+                                    <div class="input-group ">
+                                        <select class="form-select shadow-none" id="inputGroupSelect03">
+                                            <option selected class="text-center w-50">Airlines </option>
+                        
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="time" class=" mt-4 d-flex justify-content-center w-100">
+                                    <div class=" w-100">
+                                        <h6 >Departure</h6>
+                                        <input class="p-2 w-75  rounded" type="date" required="required">
+                                    </div>
+                                    <div class=" w-100">
+                                        <h6 >Arrival</h6>
+                                        <input class="p-2 w-75 rounded" type="date" name="Dep_Time" id="Dep_Time"
+                                            required="required">
+                        
+                                    </div>
+                                </div>
+                                <div id="layOver" class="container mt-5 d-flex justify-content-center align-items-center">
+                                    <h5 class="mx-2 pt-2">Layover</h5>
+                                    <select name="stops" class="px-4 py-1" required="required">
+                                        <option value="0">Non-Stop</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
+                                </div>
+                                <input type="submit" value="Submit" class="btn btn-secondary">
+                            </form>
+                        </div>
+                      
+                      </div>
+                    </div>
+                  </div>
             </div>
             <div class="offcanvas offcanvas-start  text-dark" tabindex="-1" id="offcanvasExample"
                 aria-labelledby="offcanvasExampleLabel">
@@ -131,6 +190,9 @@
         </div>
     </div>
     
+  
+       
+     <script src="./index.js"></script>
 </body>
 
 </html>

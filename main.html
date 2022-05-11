@@ -24,8 +24,8 @@
            <img class="px-5" src="./1.svg" alt="">
        </div>
        <div class="rightSide">
-           <div class="shadow p-4 rightsideint" style="color: grey;">
-            <div id="dest" class="container d-flex justify-content-center">
+        <form class="px-3 py-4 shadow" action="\predict" method="post">
+            <div id="dest"  class="container d-flex justify-content-center">
                 <div class="input-group  m-3">
                     <select class="form-select shadow-none " id="inputGroupSelect01">
                         <option class="text-center" selected>From</option>
@@ -46,19 +46,19 @@
                     </select>
                 </div>
             </div>
-            <div id="time" class=" mt-4">
-                <div class="mx-2">
+            <div id="time" class=" mt-4 d-flex justify-content-center ">
+                <div class=" text-dark mx-2 ">
                     <h6 >Departure</h6>
-                    <input class="p-2 shadow rounded" type="date" required="required">
+                    <input class="p-2 w-75  rounded" type="date" required="required">
                 </div>
-                <div class="mx-2">
+                <div class="mx-2 text-dark ">
                     <h6 >Arrival</h6>
-                    <input class="p-2  rounded" type="date" name="Dep_Time" id="Dep_Time"
+                    <input class="p-2 w-75 rounded" type="date" name="Dep_Time" id="Dep_Time"
                         required="required">
     
                 </div>
             </div>
-            <div id="layOver" class="container mt-5 d-flex justify-content-center align-items-center">
+            <div id="layOver" class="container text-dark mt-5 d-flex justify-content-center align-items-center">
                 <h5 class="mx-2 pt-2">Layover</h5>
                 <select name="stops" class="px-4 py-1" required="required">
                     <option value="0">Non-Stop</option>
@@ -68,10 +68,12 @@
                     <option value="4">4</option>
                 </select>
             </div>
-            <div class="container d-flex justify-content-center mt-5">
-                <button class="btn w-75 btn-dark  ">Find my Fare</button>
-           </div>
-       </div>
+<div class="d-flex justify-content-end">
+    <input type="submit" value="Submit" class="btn btn-secondary">
+
+</div>
+        </form>
+         
    </div>
  
       
